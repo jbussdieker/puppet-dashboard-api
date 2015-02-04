@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/node_groups
+    uri: http://localhost:3000/node_groups/sample_hosts
     body:
       encoding: US-ASCII
       string: ''
@@ -23,20 +23,21 @@ http_interactions:
       X-Ua-Compatible:
       - IE=Edge
       Etag:
-      - '"64736a21c2ca2d5088d9edef1c277849"'
+      - '"635992a769f71bd12223e6cf4c7cb271"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e6b10ddb64d26ced58e51fa1e0675c4e
+      - 75e50d3e2767445a74796aab747b70f2
       X-Runtime:
-      - '0.003942'
+      - '0.008706'
       Connection:
       - close
       Server:
       - thin 1.5.1 codename Straight Razor
     body:
       encoding: UTF-8
-      string: '[{"created_at":"2015-02-03T23:46:30Z","description":"","id":1,"name":"asdf","updated_at":"2015-02-04T00:17:28Z"},{"created_at":"2015-02-04T02:57:01Z","description":"","id":3,"name":"sample_hosts","updated_at":"2015-02-04T02:57:01Z"},{"created_at":"2015-02-03T23:49:16Z","description":null,"id":2,"name":"testing","updated_at":"2015-02-03T23:49:16Z"}]'
+      string: '{"created_at":"2015-02-04T02:57:01Z","description":"","id":3,"name":"sample_hosts","updated_at":"2015-02-04T02:57:01Z","nodes":[{"created_at":"2015-02-04T02:56:42Z","description":"Sample
+        node","environment":"production","hidden":false,"id":15,"last_apply_report_id":null,"last_inspect_report_id":null,"name":"example.com","reported_at":null,"status":null,"updated_at":"2015-02-04T02:56:42Z"}],"groups":[],"classes":[],"parameters":{"hmmm":"yup","sample":"true"}}'
     http_version: 
   recorded_at: Wed, 04 Feb 2015 03:47:01 GMT
 recorded_with: VCR 2.9.3

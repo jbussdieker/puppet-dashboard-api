@@ -1,13 +1,4 @@
-class Node < Base
-  has_many :parameters
-
-  def parameters
-    super.tap do |params|
-      params.owner = self
-    end
-  end
-
-  def set_parameter(key, value)
-    p "Setting #{key}=#{value}"
+module PuppetDashboard
+  class Node < Base
   end
 end

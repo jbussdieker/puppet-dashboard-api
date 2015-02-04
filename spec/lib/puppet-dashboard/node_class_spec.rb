@@ -16,6 +16,20 @@ module PuppetDashboard
       end
     end
 
+    describe "destroy" do
+      around(:each) do |example|
+        VCR.use_cassette("node_class_destroy") do
+          example.run
+        end
+      end
+
+      it "removes the node class" do
+        expect {
+          NodeClass.all.first.destroy
+        }.to change { NodeClass.all.count }.by(-1)
+      end
+    end
+
     describe "show" do
       around(:each) do |example|
         VCR.use_cassette("node_class") do

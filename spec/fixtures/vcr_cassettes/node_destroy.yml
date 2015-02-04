@@ -1,0 +1,160 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/nodes
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - '"94d7bf517ce328ac4eaf1e82b660f80b"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5d3d3be6dbf275a11a4b97803a98c579
+      X-Runtime:
+      - '0.003968'
+      Connection:
+      - close
+      Server:
+      - thin 1.5.1 codename Straight Razor
+    body:
+      encoding: UTF-8
+      string: '[{"created_at":"2015-02-04T04:42:34Z","description":"","environment":"production","hidden":false,"id":18,"last_apply_report_id":null,"last_inspect_report_id":null,"name":"example.com","reported_at":null,"status":null,"updated_at":"2015-02-04T04:42:34Z"}]'
+    http_version: 
+  recorded_at: Wed, 04 Feb 2015 04:42:41 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/nodes
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - '"94d7bf517ce328ac4eaf1e82b660f80b"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5e4a8a82362e1480df8719933e58588d
+      X-Runtime:
+      - '0.002431'
+      Connection:
+      - close
+      Server:
+      - thin 1.5.1 codename Straight Razor
+    body:
+      encoding: UTF-8
+      string: '[{"created_at":"2015-02-04T04:42:34Z","description":"","environment":"production","hidden":false,"id":18,"last_apply_report_id":null,"last_inspect_report_id":null,"name":"example.com","reported_at":null,"status":null,"updated_at":"2015-02-04T04:42:34Z"}]'
+    http_version: 
+  recorded_at: Wed, 04 Feb 2015 04:42:41 GMT
+- request:
+    method: delete
+    uri: http://localhost:3000/nodes/18
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Location:
+      - http://localhost:3000/nodes
+      X-Ua-Compatible:
+      - IE=Edge
+      Cache-Control:
+      - no-cache
+      Set-Cookie:
+      - _session_id=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJTM5YzU2MGIwYTgwOGMwOTliZjFjOWExYjFmOTY2OGIxBjsAVA%3D%3D--fba9c082156bab0c0fa6233f9f508c632123f18e;
+        path=/; HttpOnly
+      X-Request-Id:
+      - 544f0650c1d0dea4fb3139424ec17562
+      X-Runtime:
+      - '0.021731'
+      Connection:
+      - close
+      Server:
+      - thin 1.5.1 codename Straight Razor
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Wed, 04 Feb 2015 04:42:41 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/nodes
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - '"d751713988987e9331980363e24189ce"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 780f40f2234dea5604ea9afaed4fb70f
+      X-Runtime:
+      - '0.002386'
+      Connection:
+      - close
+      Server:
+      - thin 1.5.1 codename Straight Razor
+    body:
+      encoding: UTF-8
+      string: "[]"
+    http_version: 
+  recorded_at: Wed, 04 Feb 2015 04:42:41 GMT
+recorded_with: VCR 2.9.3

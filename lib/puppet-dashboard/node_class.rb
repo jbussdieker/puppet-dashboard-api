@@ -1,2 +1,4 @@
-class NodeClass < Base
+module PuppetDashboard
+  class NodeClass < Base
+  end
 end

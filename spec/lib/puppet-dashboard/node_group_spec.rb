@@ -4,7 +4,7 @@ module PuppetDashboard
   describe NodeGroup do
     describe "all" do
       around(:each) do |example|
-        VCR.use_cassette("node_group") do
+        VCR.use_cassette("node_groups") do
           example.run
         end
       end
@@ -16,9 +16,23 @@ module PuppetDashboard
       end
     end
 
+    describe "destroy" do
+      around(:each) do |example|
+        VCR.use_cassette("node_group_destroy") do
+          example.run
+        end
+      end
+
+      it "removes the node group" do
+        expect {
+          NodeGroup.all.first.destroy
+        }.to change { NodeGroup.all.count }.by(-1)
+      end
+    end
+
     describe "show" do
       around(:each) do |example|
-        VCR.use_cassette("node_group_sample_hosts") do
+        VCR.use_cassette("node_group") do
           example.run
         end
       end
@@ -29,12 +43,8 @@ module PuppetDashboard
         expect(subject).not_to be_nil
       end
 
-      it "has parameters" do
-       expect(subject.parameters).to be_kind_of Parameter
-      end
-
       it "has specific parameters" do
-       expect(subject.parameters["sample"]).to eql("true")
+       expect(subject["sample"]).to eql("true")
       end
     end
   end

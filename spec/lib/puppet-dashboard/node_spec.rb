@@ -14,9 +14,23 @@ module PuppetDashboard
       end
     end
 
+    describe "destroy" do
+      around(:each) do |example|
+        VCR.use_cassette("node_destroy") do
+          example.run
+        end
+      end
+
+      it "removes the node" do
+        expect {
+          Node.all.first.destroy
+        }.to change { Node.all.count }.by(-1)
+      end
+    end
+
     describe "show" do
       around(:each) do |example|
-        VCR.use_cassette("nodes_example.com") do
+        VCR.use_cassette("node") do
           example.run
         end
       end
@@ -27,12 +41,8 @@ module PuppetDashboard
         expect(subject).not_to be_nil
       end
 
-      it "has parameters" do
-       expect(subject.parameters).to be_kind_of Parameter
-      end
-
       it "has specific parameters" do
-       expect(subject.parameters["role"]).to eql("example")
+       expect(subject["role"]).to eql("example")
       end
     end
   end
