@@ -1,0 +1,42 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/nodes/example.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - '"80853f59e5c40720d8524040a5dd7cd8"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 98ad27464d03473db103e00591453fe1
+      X-Runtime:
+      - '0.011261'
+      Connection:
+      - close
+      Server:
+      - thin 1.5.1 codename Straight Razor
+    body:
+      encoding: UTF-8
+      string: '{"name":"example.com","classes":{"collectd":{}},"parameters":{"hmmm":"yup","sample":"true","role":"example"},"created_at":"2015-02-04T02:56:42Z","updated_at":"2015-02-04T02:56:42Z","groups":[{"description":"","id":3,"name":"sample_hosts"}]}'
+    http_version: 
+  recorded_at: Wed, 04 Feb 2015 03:47:01 GMT
+recorded_with: VCR 2.9.3

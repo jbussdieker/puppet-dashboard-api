@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/node_groups/sample_hosts
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - '"635992a769f71bd12223e6cf4c7cb271"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 75e50d3e2767445a74796aab747b70f2
+      X-Runtime:
+      - '0.008706'
+      Connection:
+      - close
+      Server:
+      - thin 1.5.1 codename Straight Razor
+    body:
+      encoding: UTF-8
+      string: '{"created_at":"2015-02-04T02:57:01Z","description":"","id":3,"name":"sample_hosts","updated_at":"2015-02-04T02:57:01Z","nodes":[{"created_at":"2015-02-04T02:56:42Z","description":"Sample
+        node","environment":"production","hidden":false,"id":15,"last_apply_report_id":null,"last_inspect_report_id":null,"name":"example.com","reported_at":null,"status":null,"updated_at":"2015-02-04T02:56:42Z"}],"groups":[],"classes":[],"parameters":{"hmmm":"yup","sample":"true"}}'
+    http_version: 
+  recorded_at: Wed, 04 Feb 2015 03:47:01 GMT
+recorded_with: VCR 2.9.3

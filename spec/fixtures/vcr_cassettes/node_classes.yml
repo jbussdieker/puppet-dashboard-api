@@ -1,0 +1,42 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/node_classes
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - '"4f6a723c47af5d87bb936470bb8f0d5a"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 482bd851784edebc405ce4ff7999824f
+      X-Runtime:
+      - '0.004677'
+      Connection:
+      - close
+      Server:
+      - thin 1.5.1 codename Straight Razor
+    body:
+      encoding: UTF-8
+      string: '[{"created_at":"2015-02-04T02:56:49Z","description":"","id":1,"name":"collectd","updated_at":"2015-02-04T02:56:49Z"}]'
+    http_version: 
+  recorded_at: Wed, 04 Feb 2015 03:47:01 GMT
+recorded_with: VCR 2.9.3
